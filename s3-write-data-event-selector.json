@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "S3-Bucket-Write-Events",
+    "FieldSelectors": [
+      { "Field": "eventCategory", "Equals": ["Data"] },
+      { "Field": "resources.type", "Equals": ["AWS::S3::Object"] },
+      {
+        "Field": "resources.ARN",
+        "StartsWith": ["arn:aws:s3:::aws-task3-s3-sethu-2026/"]
+      },
+      { "Field": "readOnly", "Equals": ["false"] }
+    ]
+  }
+]
